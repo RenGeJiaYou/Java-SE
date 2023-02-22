@@ -34,6 +34,7 @@ public class Counter3 {
 
 
     // 以下两个函数是死锁的一个实例.由于在各自占有一个锁以后请求对方的锁，导致无限等待
+    // 修复：使请求资源的顺序一致
     public void abc() {
         synchronized (LockA) {
             count += 5;
@@ -44,10 +45,10 @@ public class Counter3 {
     }
 
     public void xyz() {
-        synchronized (LockB) {
-            another -= 6;
-            synchronized (LockA) {
-                count -= 15;
+        synchronized (LockA) {
+            count -= 15;
+            synchronized (LockB) {
+                another -= 6;
             }
         }
     }
