@@ -1,4 +1,4 @@
-package com.test.ploy;
+package com.base.ploy;
 
 //工资，对超过 5000 的部分征税 20%
 public class Salary extends Income {

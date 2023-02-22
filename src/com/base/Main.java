@@ -1,8 +1,7 @@
-package com.test;
+package com.base;
 
-import com.test.ploy.Income;
-import com.test.entity.Person;
-import com.test.entity.Student;
+import com.base.entity.Person;
+import com.base.entity.Student;
 
 public class Main {
     public static void main(String[] args) {

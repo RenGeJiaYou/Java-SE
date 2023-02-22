@@ -1,4 +1,4 @@
-package com.core.str;
+package com.core_class;
 
 public class string_builder {
     public static void main(String[] args) {

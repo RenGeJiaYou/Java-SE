@@ -1,4 +1,4 @@
-package com.test.innerClass;
+package com.base.innerClass;
 
 public class AnonClass {
     public static void main(String[] args) {

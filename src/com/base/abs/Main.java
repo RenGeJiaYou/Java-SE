@@ -1,4 +1,4 @@
-package com.test.abs;
+package com.base.abs;
 //面向抽象编程：尽量引用高层类型，避免引用实际子类型的方式
 public class Main {
     public static void main(String[] args) {

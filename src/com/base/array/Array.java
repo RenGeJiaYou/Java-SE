@@ -1,4 +1,4 @@
-package com.test.array;
+package com.base.array;
 
 import java.util.Arrays;
 

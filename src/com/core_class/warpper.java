@@ -1,4 +1,4 @@
-package com.core.str;
+package com.core_class;
 
 /*
  * 基本类型：byte，short，int，long，boolean，float，double，char

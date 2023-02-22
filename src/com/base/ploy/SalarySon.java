@@ -1,4 +1,4 @@
-package com.test.ploy;
+package com.base.ploy;
 
 // 测试 爷类引用变量能不能指向孙类实例对象（√）
 public class SalarySon extends Salary {

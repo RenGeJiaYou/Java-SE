@@ -1,0 +1,2 @@
+Hello
+和 InputStream 类似，最重要的方法是 void write(int b) ,其中参数 int b （32 bit）是作为 1 个字节看待的，只取最低 8 位，即 b & 0xff

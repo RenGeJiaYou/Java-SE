@@ -1,4 +1,4 @@
-package com.test.ploy;
+package com.base.ploy;
 
 
 // 基本收入，税率 10%

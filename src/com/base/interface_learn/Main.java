@@ -1,4 +1,4 @@
-package com.test.interface_learn;
+package com.base.interface_learn;
 
 // 接口是进一步的抽象类，连实例字段都不能有.是一组方法签名
 // 1.超类只能继承自一个基类，却能实现实现若干个接口

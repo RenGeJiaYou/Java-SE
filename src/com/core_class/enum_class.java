@@ -1,4 +1,4 @@
-package com.core.str;
+package com.core_class;
 
 
 // 【现存问题】为什么需要枚举类，而不是直接定义一组常量的集合，原因有两个：

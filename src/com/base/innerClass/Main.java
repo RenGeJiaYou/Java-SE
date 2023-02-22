@@ -1,4 +1,4 @@
-package com.test.innerClass;
+package com.base.innerClass;
 
 //学习内部类,即定义在另一个类的内部
 public class Main {

@@ -1,4 +1,4 @@
-package com.test.static_learn;
+package com.base.static_learn;
 
 public class Person implements Animal {
     int a;

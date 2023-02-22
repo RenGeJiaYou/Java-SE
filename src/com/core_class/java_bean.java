@@ -1,4 +1,4 @@
-package com.core.str;
+package com.core_class;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;

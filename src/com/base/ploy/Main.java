@@ -1,4 +1,4 @@
-package com.test.ploy;
+package com.base.ploy;
 
 /*
  * 一个解释多态的例子

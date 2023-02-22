@@ -1,4 +1,4 @@
-package com.test.entity;
+package com.base.entity;
 
 public class Student extends Person {
 

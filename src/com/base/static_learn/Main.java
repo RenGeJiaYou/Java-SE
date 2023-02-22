@@ -1,4 +1,4 @@
-package com.test.static_learn;
+package com.base.static_learn;
 
 public class Main {
     public static void main(String[] args) {

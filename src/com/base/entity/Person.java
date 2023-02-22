@@ -1,4 +1,4 @@
-package com.test.entity;
+package com.base.entity;
 
 /*
  * 作为优化手段，java 中的 class 只在需要时加载。“需要时”指的是：
