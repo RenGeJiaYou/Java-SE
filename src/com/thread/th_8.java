@@ -6,14 +6,15 @@ package com.thread;
 // 每获取一次锁，记录 +1，每退出 synchronized 块，记录 -1 ，减到 0 的时候，才会真正释放锁
 public class th_8 {
     public static void main(String[] args) {
-        Counter3.add(10);
+        Counter3 c3 = new Counter3();
+        c3.add(10);
 
         // 死锁的一个例子
 
     }
 }
 
-public class Counter3 {
+class Counter3 {
     public static final Object LockA = new Object();
     public static final Object LockB = new Object();
 
