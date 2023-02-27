@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 // ReentrantLock 每次只允许一个线程占有锁，实际不需要这么严苛
-// ReadWriteLock 读共享，写独占
+// ReadWriteLock 读共享，写独占。称为「悲观锁」
 // 同一时刻，要么是若干个读线程，要么是一个写线程
 public class th_12 {
 }
