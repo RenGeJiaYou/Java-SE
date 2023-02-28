@@ -10,15 +10,15 @@ public class th_20 {
     public static void main(String[] args) {
         //举例：大数组求和
         // 1.单线程写法
-        long[] arr = new long[200000];
+        long[] arr = new long[1300000];
         long exceptedSum = 0;
         long startTimeSingle = System.currentTimeMillis();
-        for (int i = 0; i < 200000; i++) {
+        for (int i = 0; i < 1300000; i++) {
             arr[i] = random();
             exceptedSum += arr[i];
         }
         long endTimeSingle = System.currentTimeMillis();
-        System.out.println("single sum: " + exceptedSum + " in " + (endTimeSingle - startTimeSingle) + " ms");
+        System.out.println("single sum:\t" + exceptedSum + " in " + (endTimeSingle - startTimeSingle) + " ms");
 
 
         // 2.ForkJoin 写法
@@ -28,7 +28,7 @@ public class th_20 {
         long res = ForkJoinPool.commonPool().invoke(task);
 
         long endTime = System.currentTimeMillis();
-        System.out.println("fork sum: " + res + " in " + (endTime - startTime) + " ms");
+        System.out.println("fork sum:\t" + res + " in " + (endTime - startTime) + " ms");
     }
 
     static Random random = new Random(0);
@@ -39,7 +39,7 @@ public class th_20 {
 }
 
 class SumTask extends RecursiveTask<Long> {
-    static final int THRESHOLD = 500;
+    static final int THRESHOLD = 5000;
     long[] array;
     int start;
     int end;
@@ -58,18 +58,13 @@ class SumTask extends RecursiveTask<Long> {
             long sum = 0;
             for (int i = start; i < end; i++) {
                 sum += this.array[i];
-                // 故意放慢计算速度:
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                }
             }
             return sum;
         }
 
         // 拆分任务
         int mid = (end + start) / 2;
-        System.out.printf("split %d ~ %d ==> %d ~ %d , %d ~ %d%n", start, end, start, mid, mid, end);
+//        System.out.printf("split %d ~ %d ==> %d ~ %d , %d ~ %d%n", start, end, start, mid, mid, end);
         SumTask sub_1 = new SumTask(this.array, start, mid);
         SumTask sub_2 = new SumTask(this.array, mid, end);
 
@@ -79,7 +74,7 @@ class SumTask extends RecursiveTask<Long> {
         Long res_2 = sub_2.join();
         Long res = res_1 + res_2;
 
-        System.out.println("result = " + res_1 + " + " + res_2 + " ==> " + res);
+//        System.out.println("result = " + res_1 + " + " + res_2 + " ==> " + res);
         return res;
     }
 }
